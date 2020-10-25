@@ -27,9 +27,9 @@ def insert():
     #Insert objects into MongoDB
     try:
         #Delete the Mongo documents, just for Test purpose
-        print('Cleaning the BD...')
+        """ print('Cleaning the BD...')
         sale.delete_many({})
-        rent.delete_many({})
+        rent.delete_many({}) """
 
         #Insert new Values
         print('Inserting new values...')
