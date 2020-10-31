@@ -42,5 +42,23 @@ def insert():
     except NameError:
         print(f'No objects were inserted {NameError}')
 
+def insert_cities(json):
+    new_conecction = connection()
+
+    cities = new_conecction.cities
+
+    try:
+        #Delete the Mongo documents, just for Test purpose
+        print('Cleaning the BD...')
+        cities.delete_many({})
+
+        print('Inserting Cities')
+        cities.insert_many(json)
+
+        print('Cities were successfully inserted in DB')
+
+    except NameError:
+        print(f'No objects were inserted {NameError}')
+
 if __name__ == "__main__":
     insert()
