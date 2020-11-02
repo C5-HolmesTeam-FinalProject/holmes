@@ -1,0 +1,41 @@
+@import "../Vars.scss";
+body {
+  margin: 0;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding2;
+}
+
+.Header--dark {
+  background-color: $color1;
+}
+
+.Header__brand {
+  width: 150px;
+}
+.Header__nav {
+  width: 30%;
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.Header__nav--item {
+  padding: $padding3;
+}
+
+.Header__nav-item {
+  font-family: $font-family;
+  text-decoration: none;
+  color: $color4;
+  font-size: $size-xs;
+  font-weight: $font-weight-m;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+.Header__nav-item:hover {
+  font-size: $size-s;
+}

@@ -1,0 +1,23 @@
+@import "../Vars.scss";
+.Search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Search__Filter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 30px 0;
+  padding: 7px 0 0;
+  background-color: $color4;
+  border-radius: 100px;
+  box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.5);
+}
+
+.Search a {
+  margin-right: 50px;
+}

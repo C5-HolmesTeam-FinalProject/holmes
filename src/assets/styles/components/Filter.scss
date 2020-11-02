@@ -1,0 +1,22 @@
+@import "../Vars.scss";
+.Filter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding6;
+  border-right: 2px solid gray;
+
+  &:last-child {
+    border: none;
+    margin-right: 20px;
+  }
+}
+
+.Filter__span{
+  font-size: $size-xs;
+  padding: $padding3;
+}
+
+.Filter__img{
+  width: 1.5rem;
+}

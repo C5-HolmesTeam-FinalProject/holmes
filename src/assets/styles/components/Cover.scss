@@ -1,0 +1,33 @@
+@import "../Vars.scss";
+
+body {
+  margin: 0;
+}
+.Cover {
+  background-image: url("../../images/LuxuryHomes.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: $size-xxl * 4;
+}
+
+.Cover-Title {
+  padding: $padding5;
+  color: $color4;
+  font-size: $size-m;
+  font-weight: $font-weight-l;
+  width: $percent6;
+  text-shadow: 1px 2px 9px $colorB;
+}
+.Cover__Title--Animation {
+  margin: 0px;
+  color: $color2;
+}
+.Cover-Subtitle {
+  padding: $padding2;
+  color: $color5;
+  font-size: $size-xs;
+  font-weight: $font-weight-m;
+  width: $percent6;
+  text-shadow: 1px 2px 9px $color4;
+}

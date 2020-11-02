@@ -1,0 +1,61 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.Grid__Developers {
+  margin: 40px 40px 40px 40px;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 6rem 3rem;
+  grid-column-gap: 470px;
+}
+
+.Grid__Developers--uno,
+.Grid__Developers--dos,
+.Grid__Developers--tres,
+.Grid__Developers--cuatro,
+.Grid__Developers--cinco,
+.Grid__Developers--seis {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 25px 25px;
+}
+
+.Grid__Developers--img {
+  width: 150px;
+  margin-left: 125px;
+  margin-top: 15px;
+}
+.Grid__Developers--btnuno,
+.Grid__Developers--btndos,
+.Grid__Developers--btntres,
+.Grid__Developers--btncuatro,
+.Grid__Developers--btncinco,
+.Grid__Developers--btnseis {
+  margin-left: 150px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  background-color: #f8aa1d;
+  border: 0;
+  height: 40px;
+  width: 121px;
+  font-size: 9px;
+  color: black;
+  border-top-right-radius: 25px;
+  outline: none;
+}
+.Grid__Developers--btnlink {
+  margin-left: 150px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  background-color: #941b0c;
+  border: 0;
+  height: 40px;
+  width: 121px;
+  font-size: 9px;
+  color: white;
+  border-top-right-radius: 25px;
+  outline: none;
+}

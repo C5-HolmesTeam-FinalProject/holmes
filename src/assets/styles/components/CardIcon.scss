@@ -1,0 +1,8 @@
+.CardIcon {
+  border-right: 2px solid gray;
+
+  &:last-child {
+    border: none;
+    margin-right: 20px;
+  }
+}

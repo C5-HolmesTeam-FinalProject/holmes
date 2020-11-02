@@ -1,0 +1,60 @@
+@import "./Vars.scss";
+.Footer{
+  background-color: $color1;
+  font-family: $font-family;
+  padding: 1rem 3rem;
+}
+
+.Footer__FirstPart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.Footer__title{
+  font-size: 1.2em;
+  color:$color4;
+}
+
+.Footer__line{
+  border: 1px solid gray;
+  margin: 0 2rem;
+}
+
+.Footer__secondpart{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: $padding6;
+  grid-column-gap: 2rem;
+  color:$color4;
+
+  a{
+    color:$color4;
+  }
+}
+.Footer__brand{
+  width: 110px;
+  padding: $padding6;
+
+}
+
+.Footer__SocialIcons{
+  width: 1em;
+  padding: $padding6;
+}
+
+.Footer__SocialIcons--facebook{
+  width: 10px;
+  padding: $padding6;
+}
+
+.Footer__column{
+  display: flex;
+  padding: $padding6;
+  flex-direction: column;
+}
+
+.Footer__column ul{
+  padding: $padding6;
+}

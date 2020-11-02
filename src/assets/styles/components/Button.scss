@@ -1,0 +1,32 @@
+@import "../Vars.scss";
+.button {
+  background-color: $color2;
+  color: $color1;
+  font-family: $font-family;
+  font-size: $size-xxs;
+  font-weight: bold;
+  border-radius: 5px 25px 5px 5px;
+  outline: none;
+  padding: 0.9rem 1rem;
+  transition: 0.5s;
+}
+
+.dark {
+  background-color: $color1;
+  color: $color4;
+}
+
+.darkred {
+  background-color: $color5;
+  color: $color4;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.button:hover {
+  color: $color3;
+  font-size: $size-s;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}

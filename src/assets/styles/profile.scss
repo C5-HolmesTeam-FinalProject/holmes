@@ -1,0 +1,129 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.userData {
+  margin: 40px;
+  font-size: 1.5em;
+}
+.Grid {
+  margin: 40px 0px 40px 180px;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 550px 400px;
+  grid-template-rows: 300px;
+  grid-gap: 10px;
+  /*grid-auto-rows: minmax(100px, auto);*/
+  /*grid-row-gap: 5px;*/
+  grid-column-gap: 100px;
+}
+
+.Grid__Formulario {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 25px 25px;
+  height: 119%;
+}
+
+.Grid__Formulario--form {
+  margin: 15px;
+  width: 500px;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.labelProfile {
+  /* Tamaño y alineación uniforme */
+  display: inline-block;
+  width: 170px;
+  text-align: right;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+.ulProfile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.Grid__Formulario--form input {
+  border-radius: 25px;
+  border: 2px solid #f8aa1d;
+  width: 220px;
+  height: 25px;
+  outline: none;
+}
+.Grid__Formulario--form li + li {
+  margin-top: 1em;
+}
+
+.Grid__Imagen {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 25px 25px;
+  height: 121%;
+}
+.Grid__Imagen--usuario {
+  width: 150px;
+  margin-left: 125px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+.Grid__Imagen--btnCambiar {
+  margin: 20% 0% 0% 30%;
+}
+.Gridd__Imagen--btnImagen {
+  margin-left: 150px;
+  margin-top: 25px;
+  background-color: #f8aa1d;
+  border: 0;
+  height: 40px;
+  width: 121px;
+  font-size: 9px;
+  color: white;
+  border-top-right-radius: 25px;
+  outline: none;
+}
+
+.Grid__imagen--contraseña {
+  margin-top: 76px;
+}
+
+.Grid__Cambios {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+}
+
+.Grid__BotonCambios {
+  margin: 73px 0 100px 0;
+}
+.Gridd__Cambios--btncambios {
+  margin-left: 82px;
+  margin-top: 10px;
+  background-color: #f8aa1d;
+  border: 0;
+  height: 40px;
+  width: 125px;
+  font-size: 10px;
+  color: black;
+  border-top-right-radius: 25px;
+  outline: none;
+}
+
+.Grid__MisFavoritos {
+  display: grid;
+}
+
+.Grid__Publicaciones {
+  display: grid;
+}
+.Grid__Formulario--label {
+  // margin-left: -50px;
+}
+.Grid__Formulario--container {
+  margin-left: 20px;
+}

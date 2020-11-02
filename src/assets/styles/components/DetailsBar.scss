@@ -1,0 +1,31 @@
+.Detailss {
+  display: flex;
+  margin-top: 6%;
+}
+
+.Details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0% 10% 0% 30%;
+}
+
+.Details--Title {
+  background-color: white;
+  grid-column: 1 / span 5;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.Details__row {
+  display: flex;
+  justify-content: space-between;
+}

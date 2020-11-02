@@ -1,0 +1,21 @@
+@import "../Vars.scss";
+.Description {
+  display: flex;
+}
+.Description_block {
+  margin: 3% 10% 0% 30%;
+  border-radius: 20px;
+  background-color: #f9f7f7;
+}
+
+.Description__Title {
+  margin-left: $percent1;
+}
+
+.Description__Line {
+  width: 90%;
+}
+
+.Description__Paragraph {
+  padding: 0 $padding8 $padding8 $padding9;
+}

@@ -1,0 +1,69 @@
+@import "../Vars.scss";
+.card {
+  max-width: 350px;
+}
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: 30px 124px 15px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+}
+.card__image {
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.card__body {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+.card__body--title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card__body--heart {
+  width: 40px;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.card__footer {
+  // display: flex;
+  // justify-content: space-around;
+  display: grid;
+  // justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid grey;
+  width: 100%;
+  border-right: 2px solid gray;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+.card__footer--bed,
+.card__footer--bathroom {
+  margin-left: 20px;
+}
+.card__footer--bed,
+.card__footer--bathroom,
+.card__footer--area {
+  width: 2rem;
+  padding: 1rem 2rem;
+  border-right: 2px solid gray;
+}
+
+.card__footer--area {
+  border-right: none;
+}

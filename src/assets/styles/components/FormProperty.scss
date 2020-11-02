@@ -1,0 +1,62 @@
+@import "../Vars.scss";
+.form {
+  background: $color4;
+  border-radius: 20px;
+  width: 500px;
+  height: 480px;
+  padding: 5px;
+  margin-right: 180px;
+}
+.form_name {
+  display: flex;
+  position: relative;
+  width: 480px;
+  height: 119px;
+  background: $color7;
+  border-radius: 10px;
+  margin: 25px 10px 10px 10px;
+}
+.form_name img {
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.form_name-profile {
+  margin-left: 20px;
+}
+.form_name-profile p {
+  font-weight: $font-weight-l;
+  font-size: $size-xs;
+  margin: $size-xxs;
+}
+.form_name-profile span {
+  color: $color2;
+  font-weight: $font-weight-l;
+  font-size: $size-xs;
+  margin: 5px 0px 0px 15px;
+}
+.form_date {
+  display: block;
+  margin-left: $size-xxs;
+}
+.form_date-input {
+  width: 470px;
+  height: 50px;
+  left: 64px;
+  top: 480px;
+  border-radius: $size-xs;
+  border: 5px solid $color2;
+  box-sizing: border-box;
+  margin-bottom: $size-xs;
+}
+input::placeholder {
+  color: $color1;
+  font-size: 12px;
+  font-weight: $font-weight-l;
+  margin-left: 10px;
+  padding-left: $padding6;
+}
+.dark {
+  margin-left: 33%;
+}
