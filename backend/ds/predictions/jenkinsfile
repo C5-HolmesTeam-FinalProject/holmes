@@ -28,7 +28,7 @@ pipeline {
 
         stage('Environment setup') {
             steps {
-                bat '''
+                sh '''
                     cd backend/ds/predictions
                     python3 --version
                     python3 -m venv venv
@@ -41,7 +41,7 @@ pipeline {
 
         stage('Run'){
             steps {
-                bat "venv/bin/python runner.py ${runFunction}"
+                sh "venv/bin/python runner.py ${runFunction}"
             }
         }
         
