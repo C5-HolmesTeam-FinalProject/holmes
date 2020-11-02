@@ -1,0 +1,50 @@
+// Jenkinsfile
+// Data science main project
+
+pipeline {
+
+    agent any
+
+    triggers { cron('H */4 * * 1-5') }
+    
+    environment {
+        //runFunction = "test"
+        runFunction = "update_models"
+    }
+
+    options {
+        timestamps()
+        disableConcurrentBuilds()
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps{
+                cleanWs()
+                git branch: 'main', credentialsId: '88f45612-840d-4227-8e7e-a9db3565638b', url: 'git@github.com:C5-HolmesTeam-FinalProject/holmes.git'
+            }   
+        }
+
+        stage('Environment setup') {
+            steps {
+                bat '''
+                    cd backend/ds/predictions
+                    python3 --version
+                    python3 -m venv venv
+                    venv/bin/python -m pip install --upgrade pip
+                    venv/bin/python -m pip install -r requirements.txt
+                    '''
+            }
+        }
+
+
+        stage('Run'){
+            steps {
+                bat "venv/bin/python runner.py ${runFunction}"
+            }
+        }
+        
+    }
+}
+
