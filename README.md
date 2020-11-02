@@ -1,18 +1,3 @@
-# holmes_datascience
+# Holmes
 
-Data science repository:
-
-Branches:
-- main: production branch. Never commit directly to this branch.
-- develop: Never commit to this branch, add your changes on another branch and then merge changes.
-
-Features:
-
-
-Test for jenkins.
-
-Test for jenkins.
-
-Test for jenkins.
-
-Test for jenkins.
+Holmes is a portal where you can find properties for rent or sale, and you can also publish your properties!
