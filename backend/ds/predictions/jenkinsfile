@@ -61,7 +61,8 @@ pipeline {
             steps {
                 sh '''
                     cd backend/ds/predictions
-                    venv/bin/python runner.py ${runFunction}
+                    #venv/bin/python runner.py ${runFunction}
+                    python3 runner.py ${runFunction}
                    '''
             }
         }
