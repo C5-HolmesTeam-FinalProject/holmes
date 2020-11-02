@@ -1,6 +1,24 @@
 // Jenkinsfile
 // Data science main project
 
+def getChangeString(changeLogSets) {
+    MAX_MSG_LEN = 100
+    def changeString = ""
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            truncated_msg = entry.msg.take(MAX_MSG_LEN)
+            changeString += " - ${truncated_msg} [${entry.author}]\n"
+        }
+    }
+
+    if (!changeString) {
+        changeString = "No new changes"
+    }
+    return changeString
+}
+
 pipeline {
 
     agent any
@@ -31,20 +49,36 @@ pipeline {
                 sh '''
                     cd backend/ds/predictions
                     python3 --version
-                    python3 -m venv venv
-                    venv/bin/python -m pip install --upgrade pip
-                    venv/bin/python -m pip install -r requirements.txt
+                    #python3 -m venv venv
+                    #venv/bin/python -m pip install --upgrade pip
+                    #venv/bin/python -m pip install -r requirements.txt
                     '''
             }
         }
 
 
-        stage('Run'){
+        stage('Update reccomendations'){
             steps {
-                sh "venv/bin/python runner.py ${runFunction}"
+                sh '''
+                    cd backend/ds/predictions
+                    venv/bin/python runner.py ${runFunction}
+                   '''
             }
         }
         
+    }
+
+    post{
+        always{
+            script{
+                changes = getChangeString(currentBuild.changeSets)
+                echo "${changes}"
+            }
+            
+            withEnv([]){
+                discordSend description: changes, footer: '', image: '', link: env.BUILD_URL, result: currentBuild.result, thumbnail: '', title: env.JOB_BASE_NAME, webhookURL: 'https://discord.com/api/webhooks/769638769153671229/UThO4paRvQVJIBADmhCl8bKKqFcuG5x5W8eMbezbOPsRRdfq4mu-woUqoY1hi61r7_UR'
+            }
+        }
     }
 }
 
