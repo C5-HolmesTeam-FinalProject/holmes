@@ -1,18 +1,12 @@
-# holmes_datascience
+# Scraper
 
-Data science repository:
+The scraper will get ads from third party webs and will insert them into the DB
 
-Branches:
-- main: production branch. Never commit directly to this branch.
-- develop: Never commit to this branch, add your changes on another branch and then merge changes.
+## Requirements
 
-Features:
+To use the scraper you need to have  **python 3.8** installed on your computer
 
-
-Test for jenkins.
-
-Test for jenkins.
-
-Test for jenkins.
-
-Test for jenkins.
+## Usage
+1. Run the file **start.bat** located in the scraper folder.
+2. It will install all the libraries required to launch the Scraper.
+3. Once the scraper has finished , the data will be in the DB
